@@ -1,3 +1,7 @@
 .center {
 	text-align: center;
 }
+
+#ledger .payment { 
+	color: green;
+}
