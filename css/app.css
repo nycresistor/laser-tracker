@@ -5,3 +5,5 @@
 #ledger .payment { 
 	color: green;
 }
+
+#nav-buttons ul span { margin-right: 10px; }

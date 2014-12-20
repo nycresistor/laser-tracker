@@ -20,9 +20,28 @@ var LASERTRACKER = (function () {
 			$('<td>').text(row.total)
 		).toggleClass('payment',row.total>0));
 	}
+
+	function setUser(user) {
+		var name = (user && user[user.provider].displayName) || "";
+		if (user) user.name = name;
+		exports.currentUser = currentUser = user;
+
+		$('#loginButton').toggleClass('hidden', user || false);
+		$('#logoutButton').toggleClass('hidden', !user);
+		$('#displayName').text(name);
+		$('#name').val(name);
+
+		if (user) {
+			firebase.child('users').child(user.uid).child('price').once('value',function(snapshot) {
+				$('#price').val(snapshot.val());
+			})
+		}
+	}
+
 	exports.init = function init() {
 		firebase = new Firebase("http://lazzzor.firebaseio.com/");
 
+		firebase.onAuth(function(authData) { setUser(authData); });
 		firebase.child('ledger').limitToLast(100).on('child_added', appendLedger);
 	}
 
@@ -30,12 +49,10 @@ var LASERTRACKER = (function () {
 		firebase.authWithOAuthPopup(token, function(error, authData) {
 	  		if (error) {
     			console.log("Login Failed!", error);
-	  		} 
-  			else {
-    			console.log("Authenticated successfully with payload:", authData);
-    			currentUser = authData;
-    			exports.currentUser = currentUser;
-  			}
+	  		}
+	  		else {
+	  			$('#loginModal').modal('hide');
+	  		}
 		});
 	}
 
@@ -60,6 +77,12 @@ var LASERTRACKER = (function () {
 			);
 			// Convert to minutes, multiply by price and format
 			$('#total').val('$'+((seconds/60) * $('#price').val()).toFixed(2));
+		}
+	}
+
+	exports.rememberPrice = function rememberPrice() {
+		if (currentUser) {
+			firebase.child('users').child(currentUser.uid).child('price').set($('#price').val());
 		}
 	}
 
@@ -90,7 +113,7 @@ var LASERTRACKER = (function () {
 			$('#tab .alert').addClass('alert-danger');
 			return;
 		}
-console.log(total);
+
 		firebase.child('ledger').push({
 			'name': $('#name').val(),
 			'project': $('#project').val(),
@@ -110,6 +133,11 @@ console.log(total);
 		}
 
 		$('#trackModal').modal('hide');
+	}
+
+	exports.logout = function logout() {
+		console.log("Logout");
+		firebase.unauth();
 	}
 
 	return exports;
