@@ -1,0 +1,197 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 207.0,
+		"selected_items":
+		[
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				":W",
+				":w - Save"
+			],
+			[
+				":x",
+				"Set Syntax: XSL"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/justinday/Dropbox/Source/Hacking/laser-tracker/_site/js/app.js",
+		"/Users/justinday/Dropbox/Source/Hacking/laser-tracker/_site/css/app.css",
+		"/Users/justinday/Dropbox/Source/Hacking/laser-tracker/app.js",
+		"/Users/justinday/Dropbox/Source/Hacking/laser-tracker/app.css",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/_site/index.html",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/_includes/team.html",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/_config.yml",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/_layouts/default.html",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/_includes/css/agency.css",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/_site/style.css",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/_includes/status.html",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/_includes/about.html",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/_includes/demo.html",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/_includes/contact.html",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/js/totu.js",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/_posts/2014-07-13-project-6.markdown",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/_includes/header-mini.html",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/_includes/js.html",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/demo/index.html",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/_layouts/demo.html",
+		"/Users/justinday/Dropbox/Source/Hacking/TotU.www/css/font-awesome/fonts/fontawesome-webfont.ttf",
+		"/Users/justinday/Dropbox/Source/Hacking/mushroom-cabal/js/widgets/youtube.js",
+		"/Users/justinday/Dropbox/Source/Hacking/mushroom-cabal/js/app.js",
+		"/Users/justinday/Dropbox/Source/Hacking/mushroom-cabal/js/widgets/soundcloud.js",
+		"/Users/justinday/Dropbox/Source/Hacking/mushroom-cabal/js/widgets/iframe.js",
+		"/Users/justinday/Dropbox/Source/Hacking/mushroom-cabal/js/widgets/image.js",
+		"/Users/justinday/Dropbox/Source/Hacking/mushroom-cabal/js/widgets.js",
+		"/Users/justinday/Dropbox/Source/Hacking/mushroom-cabal/css/index.css",
+		"/Users/justinday/Dropbox/Source/Hacking/mushroom-cabal/index.html",
+		"/Users/justinday/Dropbox/Source/Hacking/mushroom-cabal/app.js",
+		"/Users/justinday/Dropbox/Source/Hacking/mushroom-cabal/bin/proxy",
+		"/Users/justinday/Dropbox/Source/Hacking/mushroom-cabal/index.css",
+		"/Users/justinday/Desktop/ChromeAnswerSDPExample.txt",
+		"/Users/justinday/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"canvas",
+			"header",
+			"center",
+			"\"Droid Serif\",",
+			"\"Roboto Slab\"",
+			"Droid",
+			"droid",
+			"center",
+			"subheading",
+			"v=17",
+			"console",
+			"DSR",
+			"ignored_pack"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"header",
+			"canvas",
+			"",
+			"v=18",
+			"Safeway"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 281.0,
+	"status_bar_visible": true
+}
