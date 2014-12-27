@@ -9,3 +9,8 @@
 #nav-buttons ul span { margin-right: 10px; }
 
 .navbar-brand img { margin-top: -10px; }
+
+#ledger td .glyphicon-remove-circle {
+	margin-right: 10px;
+	cursor: pointer;
+}

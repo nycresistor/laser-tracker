@@ -45,9 +45,9 @@ var LASERTRACKER = (function () {
 	function appendLedger(snapshot) {
 		var row = snapshot.val();
 
-		console.log(row);
+		var firstCol = $('<td>').text((new Date(row.date)).toLocaleString());
 		$('#ledger .header').after($('<tr>').append(
-			$('<td>').text((new Date(row.date)).toLocaleString()),
+			firstCol,
 			$('<td>').text(row.name),
 			$('<td>').text(row.project),
 			$('<td>').text(row.time),
@@ -56,6 +56,31 @@ var LASERTRACKER = (function () {
 			$('<td>').text(formatCurrency(row.tendered)),
 			$('<td>').text(row.method)
 		));
+
+		if (currentUser && currentUser.isAdmin) {
+			firstCol.prepend($('<span>')
+				.addClass('glyphicon glyphicon-remove-circle')
+				.click(function () { undoLedger(row); }));
+		}
+	}
+
+	function undoLedger(row) {
+		if (currentUser && currentUser.isAdmin) {
+			firebase.child('ledger').push({
+				'name': currentUser.name,
+				'project': "Undo of " + row.project,
+				'date': Firebase.ServerValue.TIMESTAMP,
+				'time': row.time,
+				'price': row.price,
+				'method': row.method,
+				'total': -row.total,
+				'tendered': -row.tendered
+			});
+
+			firebase.child('totals').child('paid').transaction(function (oldValue) {
+				return oldValue + -row.tendered;
+			});
+		}
 	}
 
 	function setUser(user) {
