@@ -183,7 +183,7 @@ var LASERTRACKER = (function () {
 	// Initializes firebase and events
 	exports.init = function init() {
 		// Instantiate firebase
-		firebase = new Firebase("http://lazzzor.firebaseio.com/");
+		firebase = new Firebase("https://lazzzor.firebaseio.com/");
 
 		// Attach event listsners
 		firebase.onAuth(setUser);
