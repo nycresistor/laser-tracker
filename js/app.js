@@ -67,7 +67,7 @@ var LASERTRACKER = (function () {
 		$('#ledger .header').after($('<tr>').append(
 			// Create the date column and hold onto it so we can prepend it for admins
 			// row.date is in ms since epoch as provided by Firebase server time
-			firstCol = $('<td>').text((new Date(row.date)).toLocaleString()),
+			firstCol = $('<td>').text((new Date(row.date)).toString("MMM d, yyyy h:mm tt")),
 			$('<td>').text(row.name),
 			$('<td>').text(row.project),
 			$('<td>').text(row.time),
