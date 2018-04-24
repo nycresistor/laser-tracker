@@ -390,7 +390,12 @@ var LASERTRACKER = (function () {
 		
 			// Sum things up
 			var row = snapshot.val();
-			time += parseTime(row.time);
+            var p = parseTime(row.time);
+            
+            if (!isNaN(p)) {
+			    time += parseTime(row.time);
+            }
+
 			paid += row.tendered;
 		
 			// Set a new timeout so that if we go a second without a summarize call
