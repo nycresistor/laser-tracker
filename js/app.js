@@ -33,6 +33,9 @@ var LASERTRACKER = (function () {
 			}
 		);
 
+        if (typeof(seconds) == "string")
+            seconds = parseInt(seconds);
+
 		return seconds;
 	}
 
