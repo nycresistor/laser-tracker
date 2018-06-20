@@ -292,7 +292,7 @@ var LASERTRACKER = (function () {
         .replace('$', '')
     )
     var paidvia
-    ;['cash', 'paypal', 'bitcoin', 'tab'].forEach(function (id) {
+    ;['cash', 'paypal', 'tab'].forEach(function (id) {
       if ($('#' + id).hasClass('active')) paidvia = id
     })
     var tendered = paidvia == 'tab' ? 0 : total
@@ -395,7 +395,7 @@ var LASERTRACKER = (function () {
         .replace('$', '')
     )
     var paidvia
-    ;['cash', 'paypal', 'bitcoin'].forEach(function (id) {
+    ;['cash', 'paypal'].forEach(function (id) {
       if ($('#tab-' + id).hasClass('active')) paidvia = id
     })
 
