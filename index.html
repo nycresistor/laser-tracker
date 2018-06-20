@@ -24,7 +24,7 @@
   	<nav class="navbar navbar-default" role="navigation">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
-	    
+	
 	    <div class="navbar-header collapse navbar-collapse">
 	      <a class="navbar-brand"><img src="img/logo.png" /></a>
 	      <a class="navbar-brand hidden-sm" href="#">NYC Resistor Laser Tracker</a>
@@ -34,7 +34,7 @@
 
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    
+	
 	      <ul class="nav navbar-nav navbar-right">
 	      	<a class="navbar-brand visible-xs"><img src="img/logo.png" /></a>
 
@@ -45,7 +45,7 @@
 	      	<button id="loginButton" type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#loginModal">Login</button>
 	      	<button id="logoutButton" type="button" class="btn btn-default navbar-btn hidden" onclick="LASERTRACKER.logout()">Logout</button>
 	      </ul>
-	    
+	
 	  </div><!-- /.container-fluid -->
 	</nav>
 
@@ -83,7 +83,7 @@
 	        <h4 class="modal-title">Login</h4>
 	      </div>
 	      <div class="modal-body">
-	        <p>Please log in with one of the services below.  We will not use or store your information beyond 
+	        <p>Please log in with one of the services below.  We will not use or store your information beyond
 	        	this identification step.</p>
 
 	        <p class="center">
@@ -125,10 +125,9 @@
 	      		<div class="form-group">
 	      			<label class="control-label" for="name">Price</label>
 	      			<select id="price" class="form-control" onchange="LASERTRACKER.updateTotal(); LASERTRACKER.rememberPrice();">
-	      				<option value="1.00">Non-member Laser Class Certified - $1.00</option>
-	      				<option value="2.00">Non-member w/o Laser Class ($25 min) - $2.00</option>
-	      				<option value="0.50">NYC Resistor Member - $0.50</option>
-	      				<option value="0.50">Laser Committee Member - $0.50</option>
+                <option value="0.25">NYC Resistor Member - $0.25</option>
+                <option value="1.00">Non-member Laser Class Certified - $1.00</option>
+                <option value="2.00">Everyone else - $2.00</option>
 	      			</select>
 	      		</div>
 	      		<div class="form-group">
