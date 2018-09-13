@@ -1,3 +1,4 @@
+/* global $, Firebase, confirm */
 // Setup a LASERTRACKER object using the Javascript Module Pattern
 //
 // http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html
@@ -295,11 +296,11 @@ var LASERTRACKER = (function () {
     ;['cash', 'paypal', 'tab'].forEach(function (id) {
       if ($('#' + id).hasClass('active')) paidvia = id
     })
-    var tendered = paidvia == 'tab' ? 0 : total
+    var tendered = paidvia === 'tab' ? 0 : total
 
     // If the user is trying to pay by tab but isn't logged in
     // warn them and stop
-    if (!currentUser && paidvia == 'tab') {
+    if (!currentUser && paidvia === 'tab') {
       $('#tab .alert').addClass('alert-danger')
       return
     }
@@ -317,7 +318,7 @@ var LASERTRACKER = (function () {
     })
 
     // If paying by tab add a new row to the users tab object
-    if (currentUser && paidvia == 'tab') {
+    if (currentUser && paidvia === 'tab') {
       firebase
         .child('tabs')
         .child(currentUser.uid)
